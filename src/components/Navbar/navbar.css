@@ -1,0 +1,8 @@
+.link {
+  padding-left: 40px;
+  color: #ff6060;
+  text-decoration: none;
+}
+.link.active {
+  text-decoration: underline;
+}

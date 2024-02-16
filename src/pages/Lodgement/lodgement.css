@@ -1,0 +1,29 @@
+.lodgement_title {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: 500;
+  margin-left: 65px;
+  margin-top: 20px;
+}
+.lodgement_location {
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 65px;
+}
+.lodgement_picture {
+  border-radius: 50%;
+}
+.lodgement_bloc {
+  display: flex;
+  align-content: space-between;
+}
+.lodgement_bloc_b {
+  display: flex;
+  align-items: flex-end;
+  align-content: space-between;
+}
+.lodgement_bloc_a {
+  display: flex;
+  flex-direction: column;
+}
