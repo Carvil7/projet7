@@ -20,7 +20,13 @@ function Collapse({ title, content }) {
       </div>
 
       <div className={toggle ? 'text_collapse act_collapse' : 'text_collapse'}>
-        {content}
+        {Array.isArray(content) ? (
+          content.map(cont => {
+            return <p key={cont}>{cont}</p>;
+          })
+        ) : (
+          <p>{content}</p>
+        )}
       </div>
     </div>
   );

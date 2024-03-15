@@ -34,3 +34,6 @@
   max-height: 500px;
   padding: 20px;
 }
+.text_collapse p {
+  margin: 5px 0;
+}
