@@ -22,3 +22,14 @@
   text-align: center;
   font-weight: 500;
 }
+
+@media (max-width: 767px) {
+  .kasa_banner img {
+    width: 335px;
+    height: 111px;
+  }
+  .kasa_banner.large img {
+    width: 336px;
+    height: 223px;
+  }
+}

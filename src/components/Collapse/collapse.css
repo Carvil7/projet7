@@ -37,3 +37,12 @@
 .text_collapse p {
   margin: 5px 0;
 }
+
+@media (max-width: 767px) {
+  .text_collapse {
+    font-size: 12px;
+  }
+  .title_collapse h2 {
+    font-size: 13px;
+  }
+}

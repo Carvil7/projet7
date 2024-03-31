@@ -22,18 +22,23 @@ function Carrousel({ pictures, title }) {
   return (
     <div className="carrousel">
       <img src={pictures[pictureIndex]} alt={title} />
-      <div
-        onClick={() => changePicture(pictureIndex + 1)}
-        className="carrousel_arrow_right"
-      >
-        <img src={arrow_right} alt="arrow_right" />
-      </div>
-      <div
-        onClick={() => changePicture(pictureIndex - 1)}
-        className="carrousel_arrow_left"
-      >
-        <img src={arrow_left} alt="arrow_left" />
-      </div>
+      {pictures.length > 1 && (
+        <>
+          <div
+            onClick={() => changePicture(pictureIndex + 1)}
+            className="carrousel_arrow_right"
+          >
+            <img src={arrow_right} alt="arrow_right" />
+          </div>
+          <div
+            onClick={() => changePicture(pictureIndex - 1)}
+            className="carrousel_arrow_left"
+          >
+            <img src={arrow_left} alt="arrow_left" />
+          </div>
+        </>
+      )}
+
       <div className="carrousel_counter">
         {pictureIndex + 1} / {pictures.length}
       </div>

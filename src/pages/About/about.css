@@ -3,3 +3,8 @@
   margin-left: 130px;
   margin-right: 130px;
 }
+@media (max-width: 767px) {
+  .collapse_ {
+    margin: 0;
+  }
+}

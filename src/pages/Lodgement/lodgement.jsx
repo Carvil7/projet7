@@ -1,14 +1,25 @@
 import Carrousel from '../../components/Carrousel/carrousel';
 import './lodgement.css';
 import data from '../../data/logements.json';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import star from '../../assets/star-active.png';
 import starinactive from '../../assets/star-inactive.png';
 import Collapse from '../../components/Collapse/collapse';
+import { useEffect } from 'react';
 
 function Lodgement() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const lodgement = data.find(item => item.id === id);
+
+  useEffect(() => {
+    if (!lodgement) {
+      navigate('/error');
+    }
+  });
+  if (!lodgement) {
+    return '/error';
+  }
 
   return (
     <>

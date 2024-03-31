@@ -6,7 +6,7 @@ import './about.css';
 function About() {
   return (
     <>
-      <Banner img={banner} />
+      <Banner img={banner} large={true} />
       <div className="collapse_">
         <Collapse
           title="Fiabilité"

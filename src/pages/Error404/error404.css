@@ -23,3 +23,16 @@
 .link_err {
   color: #ff6060;
 }
+
+@media (max-width: 767px) {
+  .error_img img {
+    width: 198px;
+    height: 99px;
+  }
+  .error_text {
+    font-size: 18px;
+  }
+  .error_link {
+    font-size: 14px;
+  }
+}

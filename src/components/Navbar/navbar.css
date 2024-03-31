@@ -6,3 +6,11 @@
 .link.active {
   text-decoration: underline;
 }
+@media (max-width: 767px) {
+  .link {
+    font-size: 12px;
+  }
+  .link.active {
+    font-size: 12px;
+  }
+}
