@@ -2,7 +2,7 @@ import Banner from '../../components/Banner/banner';
 import Card from '../../components/Card/card';
 import data from '../../data/logements.json';
 import banner from '../../assets/banner1.png';
-import './home.css';
+import './home.scss';
 
 function Home() {
   return (

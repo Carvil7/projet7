@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './collapse.css';
+import './collapse.scss';
 import icon from '../../assets/icon_down.png';
 
 function Collapse({ title, content }) {

@@ -1,5 +1,5 @@
 import Carrousel from '../../components/Carrousel/carrousel';
-import './lodgement.css';
+import './lodgement.scss';
 import data from '../../data/logements.json';
 import { useParams, useNavigate } from 'react-router-dom';
 import star from '../../assets/star-active.png';
