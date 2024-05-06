@@ -26,10 +26,14 @@
 }
 
 @media (max-width: 767px) {
-  .error_img img {
-    width: 198px;
-    height: 99px;
+  .error_img {
+    margin-top: 220px;
+    img {
+      width: 198px;
+      height: 99px;
+    }
   }
+
   .error_text {
     font-size: 18px;
   }

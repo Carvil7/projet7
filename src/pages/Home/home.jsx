@@ -7,7 +7,7 @@ import './home.scss';
 function Home() {
   return (
     <>
-      <Banner text="Chez vous, partout et ailleurs" img={banner} />
+      <Banner text="Chez vous,<br /> partout et ailleurs" img={banner} />
       <div className="kasa_cards">
         {data.map((item, index) => (
           <Card key={index} item={item} index={index} />

@@ -4,7 +4,7 @@
   align-items: center;
   object-fit: cover;
   position: relative;
-  width: 90%;
+  width: 86%;
   height: 415px;
   margin: auto;
 
@@ -33,5 +33,22 @@
     bottom: 5%;
     color: white;
     font-weight: 500;
+  }
+}
+@media (max-width: 767px) {
+  .carrousel {
+    height: 255px;
+    img {
+      border-radius: 10px;
+    }
+    .carrousel_arrow_right {
+      width: 24px;
+    }
+    .carrousel_arrow_left {
+      width: 24px;
+    }
+    .carrousel_counter {
+      display: none;
+    }
   }
 }

@@ -1,7 +1,7 @@
 .kasa_cards {
   display: flex;
   background-color: #f6f6f6;
-  width: 90%;
+  width: 86%;
   border-radius: 20px;
   flex-wrap: wrap;
   align-items: center;
@@ -11,4 +11,10 @@
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .kasa_cards {
+    background-color: white;
+  }
 }

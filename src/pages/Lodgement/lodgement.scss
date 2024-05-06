@@ -1,7 +1,7 @@
 .lodgement_bloc {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 86%;
   margin: auto;
 
   .lodgement_bloc_a {
@@ -20,6 +20,20 @@
       font-size: 18px;
       font-weight: 500;
       margin-bottom: 10px;
+    }
+    .lodge_tags {
+      display: flex;
+      align-items: center;
+
+      .lodgement_tags {
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 10px;
+        background-color: #ff6060;
+        border-radius: 10px;
+        padding: 5px 30px 5px 30px;
+      }
     }
   }
 
@@ -50,20 +64,6 @@
     }
   }
 
-  .lodge_tags {
-    display: flex;
-    align-items: center;
-
-    .lodgement_tags {
-      color: white;
-      font-size: 14px;
-      font-weight: 500;
-      margin-right: 10px;
-      background-color: #ff6060;
-      border-radius: 20px;
-      padding: 5px 30px 5px 30px;
-    }
-  }
   .rating {
     margin-right: -5px;
   }
@@ -71,19 +71,61 @@
 
 .collapse_lodgement {
   display: flex;
-  justify-content: center;
-  width: 90%;
+  justify-content: space-between;
+  width: 86%;
   margin: auto;
+  margin-bottom: 40px;
 
   .collapse_descr,
   .collapse_equip {
-    width: 582px;
     padding-top: 20px;
-    min-height: 301px;
     font-size: 18px;
+    width: 582px;
   }
-
-  .collapse_equip {
-    padding-left: 120px;
+}
+@media (max-width: 767px) {
+  .lodgement_bloc {
+    flex-direction: column;
+    .lodgement_bloc_a {
+      .lodgement_title {
+        font-size: 18px;
+      }
+      .lodgement_location {
+        font-size: 14px;
+      }
+      .lodge_tags {
+        .lodgement_tags {
+          font-size: 10px;
+          border-radius: 10px;
+          padding: 5px 20px 5px 20px;
+        }
+      }
+    }
+    .lodgement_bloc_b {
+      flex-direction: row-reverse;
+      align-items: center;
+      .lodgement_name_picture {
+        margin-top: 0;
+        .lodgement_name {
+          font-size: 12px;
+        }
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    .rating {
+      img {
+        height: 18px;
+      }
+    }
+  }
+  .collapse_lodgement {
+    flex-direction: column;
+    .collapse_descr,
+    .collapse_equip {
+      width: 100%;
+    }
   }
 }

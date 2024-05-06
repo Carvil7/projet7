@@ -7,7 +7,7 @@
   .kasa_card_image_text {
     display: flex;
     flex-wrap: wrap;
-    align-items: left;
+    align-items: baseline;
     justify-content: space-between;
     align-content: space-between;
     flex-direction: column;
@@ -40,6 +40,22 @@
         color: white;
         font-weight: 500;
         margin-left: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .kasa_card {
+    margin: 0px 20px 20px 0;
+    img {
+      border-radius: 10px;
+    }
+
+    .kasa_card_image_text {
+      width: 335px;
+      height: 255px;
+      img {
+        border-radius: 10px;
       }
     }
   }

@@ -44,10 +44,22 @@
 }
 
 @media (max-width: 767px) {
-  .text_collapse {
-    font-size: 12px;
-  }
-  .title_collapse h2 {
-    font-size: 13px;
+  .collapse_bloc {
+    .text_collapse {
+      font-size: 12px;
+    }
+    .text_collapse.act_collapse {
+      padding: 20px;
+    }
+    .title_collapse {
+      padding-left: 12px;
+
+      img {
+        width: 24px;
+      }
+      h2 {
+        font-size: 13px;
+      }
+    }
   }
 }
