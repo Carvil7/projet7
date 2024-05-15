@@ -9,8 +9,11 @@
 @media (max-width: 767px) {
   .link {
     font-size: 12px;
+    padding-left: 0px;
+    padding-right: 20px;
   }
   .link.active {
     font-size: 12px;
+    padding-right: 20px;
   }
 }
