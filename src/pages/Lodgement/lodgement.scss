@@ -75,7 +75,7 @@
   }
 
   .rating {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     margin-right: -5px;
     display: flex;
 
@@ -97,6 +97,20 @@
   .collapse_equip {
     font-size: $small;
     width: 582px;
+
+    .collapse_bloc {
+      .title_collapse {
+        h2 {
+          font-size: $small;
+          font-weight: $bolder;
+        }
+      }
+
+      .text_collapse {
+        font-size: $small;
+        font-weight: $normal;
+      }
+    }
   }
 }
 
@@ -112,7 +126,7 @@
       }
     }
     .rating {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       margin-left: -6px;
     }
   }
@@ -188,6 +202,18 @@
     .collapse_descr,
     .collapse_equip {
       width: 100%;
+
+      .collapse_bloc {
+        .title_collapse {
+          h2 {
+            font-size: 13px;
+          }
+        }
+
+        .text_collapse {
+          font-size: 12px;
+        }
+      }
     }
   }
 }

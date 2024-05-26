@@ -4,6 +4,13 @@
   margin-right: 208px;
 }
 
+@media (max-width: 900px) {
+  .collapse_ {
+    margin-left: 108px;
+    margin-right: 108px;
+  }
+}
+
 @media (max-width: 767px) {
   .collapse_ {
     margin: 0;
