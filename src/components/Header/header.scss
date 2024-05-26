@@ -1,9 +1,10 @@
+@import '../../style/_mixins.scss';
+@import '../../style/_variables.scss';
+
 .header_kasa {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include block-between;
   margin: auto;
-  width: 86%;
+  width: $large;
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -14,6 +15,7 @@
     height: 47px;
     padding-left: 20px;
   }
+
   .header_kasa {
     margin-top: 20px;
     width: 100%;

@@ -1,20 +1,21 @@
+@import '../../style/_mixins.scss';
+@import '../../style/_variables.scss';
+
 .collapse_bloc {
-  background-color: #f6f6f6;
-  border-radius: 5px;
+  background-color: $color-quarternary;
+  border-radius: $light;
 
   .title_collapse {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ff6060;
-    border-radius: 5px;
+    @include block-between;
+    background-color: $color-primary;
+    border-radius: $light;
     padding-left: 20px;
     padding-right: 20px;
 
     h2 {
-      color: white;
+      color: $color-secondary;
       font-size: 24px;
-      font-weight: 500;
+      font-weight: $bolder;
       margin-top: 10px;
       margin-bottom: 10px;
     }
@@ -28,9 +29,11 @@
     max-height: 500px;
     padding: 20px;
   }
+
   .text_collapse {
-    color: #ff6060;
+    color: $color-primary;
     font-size: 24px;
+    font-weight: $normal;
     margin-bottom: 25px;
     padding: 0 20px 0 20px;
     max-height: 0;
@@ -48,17 +51,23 @@
     .text_collapse {
       font-size: 12px;
     }
+
     .text_collapse.act_collapse {
       padding: 20px;
     }
+
     .title_collapse {
       padding-left: 12px;
+      padding-right: 5px;
 
       img {
         width: 24px;
       }
+
       h2 {
         font-size: 13px;
+        margin-top: 7px;
+        margin-bottom: 7px;
       }
     }
   }

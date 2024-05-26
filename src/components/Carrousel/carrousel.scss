@@ -1,10 +1,11 @@
+@import '../../style/_mixins.scss';
+@import '../../style/_variables.scss';
+
 .carrousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include block-center;
   object-fit: cover;
   position: relative;
-  width: 86%;
+  width: $large;
   height: 415px;
   margin: auto;
 
@@ -12,11 +13,10 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
+    @include block-center;
+    border-radius: $grand;
   }
+
   .carrousel_arrow_right {
     position: absolute;
     right: 1%;
@@ -31,10 +31,12 @@
     position: absolute;
     right: 50%;
     bottom: 5%;
-    color: white;
-    font-weight: 500;
+    color: $color-secondary;
+    font-weight: $bolder;
+    font-size: $small;
   }
 }
+
 @media (max-width: 767px) {
   .carrousel {
     height: 255px;
@@ -42,15 +44,19 @@
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 26px;
+
     img {
-      border-radius: 10px;
+      border-radius: $light;
     }
+
     .carrousel_arrow_right {
       width: 24px;
     }
+
     .carrousel_arrow_left {
       width: 24px;
     }
+
     .carrousel_counter {
       display: none;
     }

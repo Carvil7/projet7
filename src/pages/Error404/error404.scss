@@ -1,33 +1,37 @@
+@import '../../style/_mixins.scss';
+@import '../../style/_variables.scss';
+
 .error_img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include block-center;
+  margin-top: 205px;
 }
+
 .error_text {
   text-align: center;
-  font-size: 36px;
-  color: #ff6060;
-  font-weight: 500;
-  margin-top: 40px;
+  font-size: $medium;
+  color: $color-primary;
+  font-weight: $bolder;
+  margin-top: 60px;
 }
 
 .error_link {
-  color: #ff6060;
-  font-weight: 500;
+  color: $color-primary;
+  font-weight: $bolder;
   text-align: center;
-  font-size: 18px;
+  font-size: $small;
   text-decoration: none;
-  margin-top: 120px;
-  margin-bottom: 40px;
+  margin-top: 150px;
+  margin-bottom: 80px;
 
   .link_err {
-    color: #ff6060;
+    color: $color-primary;
   }
 }
 
 @media (max-width: 767px) {
   .error_img {
-    margin-top: 220px;
+    margin-top: 150px;
+
     img {
       width: 198px;
       height: 99px;
@@ -35,9 +39,12 @@
   }
 
   .error_text {
-    font-size: 18px;
+    font-size: $small;
+    margin: 20px 50px;
   }
+
   .error_link {
-    font-size: 14px;
+    font-size: $x_small;
+    margin-top: 130px;
   }
 }

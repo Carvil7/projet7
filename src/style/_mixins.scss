@@ -5,3 +5,14 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin block-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin content_between {
+  display: flex;
+  justify-content: space-between;
+}

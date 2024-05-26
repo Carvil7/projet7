@@ -1,39 +1,46 @@
+@import '../../style/_mixins.scss';
+@import '../../style/_variables.scss';
+
 .kasa_banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 63px;
+  @include block-center;
+  margin-top: 60px;
 
   img {
-    width: 86%;
+    width: $large;
     height: 223px;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 20px;
+    border-radius: $grand;
     position: relative;
     filter: brightness(70%);
     object-fit: cover;
   }
+
   h1 {
     position: absolute;
     font-size: 48px;
-    color: white;
+    color: $color-secondary;
     text-align: center;
-    font-weight: 500;
+    font-weight: $bolder;
+
     br {
       display: none;
     }
   }
 }
 
+.kasa_banner.large {
+  margin-top: 40px;
+}
 @media (max-width: 767px) {
   .kasa_banner {
     margin-top: 16px;
     padding-left: 20px;
     padding-right: 20px;
+
     img {
       height: 111px;
-      border-radius: 10px;
+      border-radius: $light;
       width: 100%;
       margin: 0;
     }
@@ -42,13 +49,17 @@
       font-size: 24px;
       text-align: left;
       width: 100%;
-      padding-left: 60px;
+      padding-left: 65px;
 
       br {
         display: inline-block;
       }
     }
   }
+  .kasa_banner.large {
+    margin-top: 0;
+  }
+
   .kasa_banner.large img {
     width: 100%;
     height: 223px;

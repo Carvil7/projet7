@@ -30,11 +30,7 @@ function Lodgement() {
           <span className="lodgement_location">{lodgement.location}</span>
           <div className="lodge_tags">
             {lodgement.tags.map(tag => {
-              return (
-                <span key={tag} className="lodgement_tags">
-                  {tag}
-                </span>
-              );
+              return <button key={tag}>{tag}</button>;
             })}
           </div>
         </article>

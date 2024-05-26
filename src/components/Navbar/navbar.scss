@@ -1,17 +1,24 @@
+@import '../../style/_variables.scss';
+
 .link {
-  padding-left: 40px;
-  color: #ff6060;
+  padding-left: 65px;
+  color: $color-primary;
   text-decoration: none;
+  font-size: 24px;
+  font-weight: $bolder;
 }
+
 .link.active {
   text-decoration: underline;
 }
+
 @media (max-width: 767px) {
   .link {
     font-size: 12px;
     padding-left: 0px;
     padding-right: 20px;
   }
+
   .link.active {
     font-size: 12px;
     padding-right: 20px;

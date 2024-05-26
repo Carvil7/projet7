@@ -1,60 +1,69 @@
+@import '../../style/_mixins.scss';
+@import '../../style/_variables.scss';
+
 .lodgement_bloc {
-  display: flex;
-  justify-content: space-between;
-  width: 86%;
+  @include content_between;
+  width: $large;
   margin: auto;
 
   .lodgement_bloc_a {
-    display: flex;
+    @include content_between;
     flex-direction: column;
-    justify-content: space-between;
 
     .lodgement_title {
-      color: #ff6060;
-      font-size: 36px;
-      font-weight: 500;
-      margin-top: 20px;
+      color: $color-primary;
+      font-size: $medium;
+      font-weight: $bolder;
+      margin-top: 30px;
+      margin-bottom: 5px;
     }
+
     .lodgement_location {
-      color: #ff6060;
-      font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 10px;
+      color: $color-primary;
+      font-size: $small;
+      font-weight: $bolder;
+      margin-bottom: 20px;
     }
+
     .lodge_tags {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
 
-      .lodgement_tags {
-        color: white;
-        font-size: 14px;
-        font-weight: 500;
+      button {
+        color: $color-secondary;
+        font-size: $x_small;
+        font-weight: $bolder;
         margin-right: 10px;
-        background-color: #ff6060;
-        border-radius: 10px;
-        padding: 5px 30px 5px 30px;
+        background-color: $color-primary;
+        border-radius: $light;
+        padding: 4px 0 4px;
+        border: $color-secondary;
+        width: 115px;
+        @include block-center;
+        cursor: text;
+        margin-bottom: 10px;
       }
     }
   }
 
   .lodgement_bloc_b {
-    display: flex;
+    @include content_between;
     align-items: flex-end;
-    justify-content: space-between;
     flex-direction: column;
 
     .lodgement_name_picture {
       display: flex;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 30px;
 
       .lodgement_name {
-        color: #ff6060;
-        font-size: 18px;
+        display: flex;
+        color: $color-primary;
+        font-size: $small;
         margin-right: 10px;
         text-align: right;
-        max-width: 60px;
+        max-width: 70px;
       }
 
       img {
@@ -66,75 +75,116 @@
   }
 
   .rating {
+    margin-bottom: 3px;
     margin-right: -5px;
-    margin-bottom: -8px;
+    display: flex;
+
+    img {
+      margin-right: 3px;
+    }
   }
 }
 
 .collapse_lodgement {
-  display: flex;
-  justify-content: space-between;
-  width: 86%;
+  @include content_between;
+  width: $large;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-top: 30px;
   gap: 20px;
 
   .collapse_descr,
   .collapse_equip {
-    padding-top: 20px;
-    font-size: 18px;
+    font-size: $small;
     width: 582px;
   }
 }
+
+@media (max-width: 900px) {
+  .lodgement_bloc {
+    flex-direction: column;
+
+    .lodgement_bloc_b {
+      flex-direction: row-reverse;
+
+      .lodgement_name_picture {
+        margin-top: 0;
+      }
+    }
+    .rating {
+      margin-bottom: 15px;
+      margin-left: -6px;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .lodgement_bloc {
     flex-direction: column;
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
+
     .lodgement_bloc_a {
       .lodgement_title {
-        font-size: 18px;
+        font-size: $small;
+        margin-top: 20px;
+        max-width: 230px;
       }
+
       .lodgement_location {
-        font-size: 14px;
+        font-size: $x_small;
       }
+
       .lodge_tags {
         flex-wrap: wrap;
-        .lodgement_tags {
+
+        button {
           font-size: 10px;
-          border-radius: 10px;
-          padding: 5px 20px 5px 20px;
+          border-radius: $light;
+          padding: 4px;
+          width: 84px;
         }
       }
     }
+
     .lodgement_bloc_b {
       flex-direction: row-reverse;
       align-items: center;
+      padding-top: 10px;
+
       .lodgement_name_picture {
         margin-top: 0;
+
         .lodgement_name {
           font-size: 12px;
+          margin-right: 5px;
         }
+
         img {
           width: 32px;
           height: 32px;
         }
       }
     }
+
     .rating {
-      margin-bottom: 0;
       margin-left: -3px;
+      margin-bottom: 0;
+
       img {
         height: 18px;
+        margin-right: 2px;
       }
     }
   }
+
   .collapse_lodgement {
     flex-direction: column;
     width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px 30px 20px;
+
     .collapse_descr,
     .collapse_equip {
       width: 100%;
