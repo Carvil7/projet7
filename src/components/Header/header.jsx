@@ -1,16 +1,13 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import Navbar from '../Navbar/navbar';
 import logo from '../../assets/logo1.png';
 import './header.scss';
-
-const HomeLogo = styled.img``;
 
 function Header() {
   return (
     <div className="header_kasa">
       <Link to="/">
-        <HomeLogo src={logo} />
+        <img src={logo} alt="Logo website" />
       </Link>
       <Navbar />
     </div>
